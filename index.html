@@ -3,21 +3,78 @@
 <html>
     <head>
         <style>
+            html {
+                padding: 0;
+                margin: 0;
+                height: 100%;
+            }
+
+            body {
+                padding: 0;
+                margin: 0;
+                min-height: 100%;
+
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-rows: 1fr 1fr 1fr;
+                grid-template-areas:
+                    "left-header . right-header"
+                    ". center-area ."
+                    "footer footer footer";
+            }
+
+            #topleft-element {
+                grid-area: left-header;
+                justify-self: start;
+                align-self: start;
+            }
+
+            #topright-element {
+                grid-area: right-header;
+                justify-self: end;
+                align-self: start;
+            }
+
+            #center-element {
+                grid-area: center-area;
+                justify-self: center;
+                align-self: center;
+            }
+
+            #footer-element {
+                grid-area: footer;
+                align-self: end;
+            }
+
 
 
         </style>
 
-    </head>
+</head>
 
     <body>
-        <img src="img/googlelogo_color_272x92dp.png" alt="The Google logo">
-        <form>
-            <input type="text">
-            <input type="submit">
-            <input type="submit">
 
-        </form>
+        <div id="topleft-element">
+            <p>TEST</p>
+        </div>
 
+        <div id="topright-element">
+            <p>TEST RIGHT</p>
+        </div>
+
+        <div id="center-element">
+            <img src="img/googlelogo_color_272x92dp.png" alt="The Google logo">
+            <form>
+                <input type="text">
+                <input type="submit">
+                <input type="submit">
+            
+            </form>
+        </div>
+
+        <div id="footer-element">
+            <p>TEST FOOTER</p>
+        </div>
     </body>
 
 
