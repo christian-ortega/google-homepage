@@ -23,6 +23,28 @@
                     "footer footer footer";
             }
 
+            ul {
+
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                
+            }
+
+            a {
+                color: black;
+                opacity: 0.75;
+                text-decoration: none;
+            }
+
+            a:hover {
+                text-decoration: underline;
+            }
+
             #topleft-element {
                 grid-area: left-header;
                 justify-self: start;
@@ -44,8 +66,20 @@
             #footer-element {
                 grid-area: footer;
                 align-self: end;
+
+                display: flex;
+                justify-content: space-between;
             }
 
+            #apps-button {
+                height: 30px;
+                width: 30px;
+                opacity: .55;
+
+                display: inline-block;
+                background-image: url("img/i1_1967ca6a.png");
+                background-position: -132px -38px;
+            }
 
 
         </style>
@@ -55,11 +89,19 @@
     <body>
 
         <div id="topleft-element">
-            <p>TEST</p>
+            <ul>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Store</a></li>
+            </ul>
         </div>
 
         <div id="topright-element">
-            <p>TEST RIGHT</p>
+            <ul>
+                <li><a href="#">Gmail</a></li>
+                <li><a href="#">Images</a></li>
+                <li><a id="apps-button" href="#"></a></li>
+                <li><a id="login-button" href="#">Sign In</a></li>
+            </ul>
         </div>
 
         <div id="center-element">
@@ -73,8 +115,19 @@
         </div>
 
         <div id="footer-element">
-            <p>TEST FOOTER</p>
+            <ul>
+                <li><a href="#">Advertising</a></li>
+                <li><a href="#">Business</a></li>
+                <li><a href="#">How Search works</a></li>
+            </ul>
+
+            <ul>
+                <li><a href="#">Privacy</a></li>
+                <li><a href="#">Terms</a></li>
+                <li><a href="#">Settings</a></li>
+            </ul>
         </div>
+
     </body>
 
 
