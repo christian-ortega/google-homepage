@@ -7,6 +7,9 @@
                 padding: 0;
                 margin: 0;
                 height: 100%;
+
+                font-family: arial, sans-serif;
+                font-size: 16px;
             }
 
             body {
@@ -35,6 +38,10 @@
                 
             }
 
+            li {
+                padding: 20px 7.5px 20px 15px;
+            }
+
             a {
                 color: black;
                 opacity: 0.75;
@@ -43,6 +50,14 @@
 
             a:hover {
                 text-decoration: underline;
+            }
+
+            .left-element {
+                padding-left: 25px;
+            }
+
+            .right-element {
+                padding-right: 25px;
             }
 
             #topleft-element {
@@ -69,16 +84,47 @@
 
                 display: flex;
                 justify-content: space-between;
+
+                background-color: rgba(34, 34, 34, 0.10);
+                background-clip: padding-box;
+
+                border-style: solid;
+                border-top-width: 2px;
+                border-bottom-width: 0;
+                border-right-width: 0;
+                border-left-width: 0;
+                border-color: rgba(34, 34, 34, 0.20);
             }
 
             #apps-button {
                 height: 30px;
                 width: 30px;
                 opacity: .55;
+                
+                position: relative;
+                bottom: 5px;
 
                 display: inline-block;
                 background-image: url("img/i1_1967ca6a.png");
                 background-position: -132px -38px;
+                
+            }
+
+            #login-button {
+                text-decoration: none;
+                color: white;
+
+                background-color: rgba(0, 26, 255, 0.9);
+                background-clip: padding-box;
+                
+                border: 5px solid rgba(0, 26, 255, 0.9);
+                border-left-width: 10px;
+                border-right-width: 10px;
+                border-radius: 3px;
+                
+                
+
+                
             }
 
 
@@ -86,21 +132,21 @@
 
 </head>
 
-    <body>
+<body>
 
-        <div id="topleft-element">
-            <ul>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Store</a></li>
-            </ul>
-        </div>
+    <div id="topleft-element">
+        <ul>
+            <li class="left-element"><a href="#">About</a></li>
+            <li><a href="#">Store</a></li>
+        </ul>
+    </div>
 
         <div id="topright-element">
             <ul>
                 <li><a href="#">Gmail</a></li>
                 <li><a href="#">Images</a></li>
                 <li><a id="apps-button" href="#"></a></li>
-                <li><a id="login-button" href="#">Sign In</a></li>
+                <li class="right-element"><a id="login-button" href="#"><strong>Sign In</strong></a></li>
             </ul>
         </div>
 
@@ -116,7 +162,7 @@
 
         <div id="footer-element">
             <ul>
-                <li><a href="#">Advertising</a></li>
+                <li class="left-element"><a href="#">Advertising</a></li>
                 <li><a href="#">Business</a></li>
                 <li><a href="#">How Search works</a></li>
             </ul>
@@ -124,7 +170,7 @@
             <ul>
                 <li><a href="#">Privacy</a></li>
                 <li><a href="#">Terms</a></li>
-                <li><a href="#">Settings</a></li>
+                <li class="right-element"><a href="#">Settings</a></li>
             </ul>
         </div>
 
