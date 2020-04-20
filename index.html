@@ -52,6 +52,26 @@
                 text-decoration: underline;
             }
 
+            input[type=submit] {
+                cursor: pointer;
+
+                background-clip: padding-box;
+
+                border-style: solid;
+                border-width: 7px;
+                border-left-width: 1px;
+                border-right-width: 1px;
+                border-radius: 3px;
+            }
+
+            input[type=submit]:hover {
+                box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+                background-image: -webkit-linear-gradient(top,#f8f8f8,#f1f1f1);
+                background-color: #f8f8f8;
+                border: 1px solid #c6c6c6;
+            }
+        
+
             .left-element {
                 padding-left: 25px;
             }
@@ -76,6 +96,11 @@
                 grid-area: center-area;
                 justify-self: center;
                 align-self: center;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
             }
 
             #footer-element {
@@ -121,10 +146,58 @@
                 border-left-width: 10px;
                 border-right-width: 10px;
                 border-radius: 3px;
-                
-                
+            }
 
+            #logo {
+                margin-top: -37px;
+                padding-bottom: 30px;
                 
+            }
+
+            #search-form {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr 1fr;
+                grid-template-areas:
+                    "bar bar" 
+                    "button_1 button_2";
+                grid-gap: 30px 10px;
+            }
+
+            #search-bar {
+                grid-area: bar;
+                width: 487px;
+                height: 32px;  
+                justify-self: center;
+                font-size: 16px;
+                padding-left: 12px;
+                padding-right: 12px;
+
+                border-radius: 50px;
+                border-color: rgb(200,200,200);
+                border-style: solid;
+                border-width: 1px;
+                
+                
+            }
+
+            #search-bar:hover {
+                box-shadow: 0 5px 5px rgba(0,0,0,0.1);
+                
+                border: 1px solid rgb(200,200,200);
+            }
+
+            #search-button {
+                grid-area: button_1;
+                justify-self: end;
+                width: 120px;
+                
+            }
+
+            #lucky-button {
+                grid-area: button_2;
+                justify-self: start;
+                width: 120px;
             }
 
 
@@ -151,11 +224,11 @@
         </div>
 
         <div id="center-element">
-            <img src="img/googlelogo_color_272x92dp.png" alt="The Google logo">
-            <form>
-                <input type="text">
-                <input type="submit">
-                <input type="submit">
+            <img id="logo" src="img/googlelogo_color_272x92dp.png" alt="The Google logo">
+            <form id="search-form">
+                <input id="search-bar" type="text">
+                <input id="search-button" type="submit" value="Google Search">
+                <input id="lucky-button" type="submit" value="I'm Feeling Lucky">
             
             </form>
         </div>
