@@ -1,5 +1,5 @@
 # google-homepage
-## THE ODIN PROJECT: HTML/CSS PROJECT
+THE ODIN PROJECT: HTML/CSS PROJECT
 
 ### Google Homepage ([View in Browser](https://christian-ortega.github.io/google-homepage/))
 
